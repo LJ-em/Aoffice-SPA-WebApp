@@ -126,6 +126,7 @@
         background-color: white
         padding-top: 12px
         padding-bottom: 12px
+        position: relative
         // 输入框背景色
         .mu-text-field
             +REM(margin, $autoMargin/2)
@@ -138,13 +139,12 @@
             font-size: 14px !important
         // 清空关键词输入框
         .clear_keyword
-            display: inline-block
-            position: relative
-            left: -22px
-            margin-left: 74%
             border-width: 0
-            padding-left: 4px
-            padding-right: 4px
+            padding: 4px 8px
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 23%
         // 按钮背景色修改
         .mu-flat-button
             width: 19%
@@ -153,6 +153,7 @@
             // "取消"按钮两侧的padding设为空
             span.mu-flat-button-label
                 padding: 0 !important
+                margin-top: 12px !important
         .input_search
             height: 36px
             width: 76%
