@@ -3,6 +3,7 @@ import  Vuex                from 'vuex'
 import  * as getters        from './getters'
 import  * as actions        from './actions'
 import  * as mutations      from './mutations'
+import search from './modules/search'
 
 Vue.use(Vuex)
 // 状态树
@@ -88,6 +89,9 @@ const store = new Vuex.Store({
     getters,
     actions,
     mutations,
+    modules:{
+        search
+    }
 })
 if (module.hot) {
     module.hot.accept([
