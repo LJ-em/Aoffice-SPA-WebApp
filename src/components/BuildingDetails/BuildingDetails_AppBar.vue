@@ -9,13 +9,14 @@
     </div>
 </template>
 <script>
-export default {
+    import VueRouter from 'vue-router'
+    export default {
     props: ['AppBar_title']
     ,methods: {
         // 目的: 执行跳转
         returnIndex: () => {
-            // 此处应该返回上一步的历史位置 而不是指定页面
-            location.href = '#'
+            const router = new VueRouter();
+            router.go(-1);
         }
     }
 }
