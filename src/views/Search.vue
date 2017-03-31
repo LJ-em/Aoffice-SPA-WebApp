@@ -89,8 +89,19 @@
                 }
                 return temp_array;
             },
+            toBuildingDetails: function (toPageCode, toPageType) {
+                // 判断大厦类型( 大楼 / 联合办公 )
+                if (toPageType === 'A') {
+                    // 跳向'写字楼' 路由模版
+                    location.href = '#/office-Building/' + toPageCode
+                } else {
+                    // 跳向'联合办公' 路由模版
+                    location.href = '#/co-working/' + toPageCode
+                }
+            },
             clickHotKeyword(code){
-                console.log(code)
+                //FIXME API 返回信息不全，需返回大厦类型
+                this.toBuildingDetails(code, 'A');
             },
             search(){
                 console.log(this.keyword);
